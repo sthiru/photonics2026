@@ -224,7 +224,7 @@ ul li, ol li {
 
 .btn-common:hover {
   color: #fff;
-  background-image: linear-gradient(65deg, #439df1 0, #6fecff 100%);
+  background-image: linear-gradient(65deg, #439df1 0, #2babe2 100%);
   box-shadow: 0 8px 16px rgba(255, 184, 77, 0.4);
   transition: all .2s ease-in-out;
   -moz-transition: all .2s ease-in-out;
@@ -594,21 +594,21 @@ a.back-to-top:hover, a.back-to-top:focus {
 }
 
 .top-nav-collapse .navbar-nav .nav-link {
-  color: #212121 !important;
+  color: #fff !important;
 }
 
 .top-nav-collapse .navbar-nav .nav-link:hover {
-  color: #224195 !important;
+  color: #2babe2 !important;
 }
 
 .top-nav-collapse .navbar-nav li.active a.nav-link {
-  color: #224195 !important;
+  color: #2babe2 !important;
 }
 
 .navbar-expand-lg .navbar-toggler {
   background: transparent;
   border: 1px solid #224195;
-  background-image: linear-gradient(65deg, #224195 0, #439df1 100%);
+  background-image: linear-gradient(65deg, #224195 0, #2babe2 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -669,7 +669,7 @@ a.back-to-top:hover, a.back-to-top:focus {
 .navbar-expand-lg .navbar-nav li a:hover,
 .navbar-expand-lg .navbar-nav li .active > a,
 .navbar-expand-lg .navbar-nav li a:focus {
-  background-image: linear-gradient(65deg, #224195 0, #439df1 100%);
+  background-image: linear-gradient(65deg, #439df1 0, #2babe2 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -678,20 +678,20 @@ a.back-to-top:hover, a.back-to-top:focus {
 
 .navbar-expand-lg .navbar-nav .nav-link:focus,
 .navbar-expand-lg .navbar-nav .nav-link:hover {
-  background-image: linear-gradient(65deg, #224195 0, #439df1 100%);
+  background-image: linear-gradient(65deg, #439df1 0, #2babe2 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text !important;
 }
 
 .navbar {
-  top: 60px;
+  top: 90px;
   padding: 0;
   background: #224195;
 }
 
 .navbar li.active a.nav-link {
-  background-image: linear-gradient(65deg, #224195 0, #439df1 100%);
+  background-image: linear-gradient(65deg, #439df1 0, #2babe2 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text !important;
@@ -2209,12 +2209,18 @@ footer {
   font-size: 50px;
 }
 
-#hero-area .contents .banner-info {
+.banner-container {
+  text-align: right;
+  padding-top: 5%;
+}
+
+.banner-info {
   font-size: 18px;
   font-style: italic;
   margin-bottom: 22px;
   line-height: 24px;
   color: #fff;
+  align-items: end;
 }
 
 #hero-area .contents .head-title {
@@ -2246,7 +2252,7 @@ footer {
 .logo-bar-area {
   background: linear-gradient(90deg, #2baae1 0%, #8f3f98 100%);
   padding: 1rem;
-  text-align: center;
+  text-align: left;
 }
 
 /* Logo Bar Styles */
@@ -2260,8 +2266,7 @@ footer {
   float: left;
 }
 
-.logo img {
-  width: 100px; /* adjust the width as needed */
-  height: auto;
-  margin: 0;
+.logo-bar h2 {
+  line-height: inherit;
+  color: #fff;
 }

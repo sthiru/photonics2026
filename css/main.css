@@ -690,6 +690,18 @@ a.back-to-top:hover, a.back-to-top:focus {
   background: #224195;
 }
 
+@media (max-width: 480px) {
+  .navbar {
+    top: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    top: 175px;
+  }
+}
+
 .navbar li.active a.nav-link {
   background-image: linear-gradient(65deg, #439df1 0, #2babe2 100%);
   -webkit-background-clip: text;

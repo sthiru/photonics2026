@@ -10,17 +10,37 @@
 
   // Sticky Nav
     $(window).on('scroll', function() {
-      if ($(window).width >= 768) {
+      if ($(window).width() >= 992) {
         if ($(window).scrollTop() > 100) {
             $('.scrolling-navbar').addClass('top-nav-collapse');
+            $('.scrolling-navbar').css('top', 100);
         } else {
             $('.scrolling-navbar').removeClass('top-nav-collapse');
             $('.scrolling-navbar').css('top', 100-$(window).scrollTop());
         }
       }
-      else{
+      else if($(window).width() >= 768) {
+        if ($(window).scrollTop() > 130) {
+          $('.scrolling-navbar').addClass('top-nav-collapse');
+          $('.scrolling-navbar').css('top', 130);
+        } else {
+          $('.scrolling-navbar').removeClass('top-nav-collapse');
+          $('.scrolling-navbar').css('top', 130-$(window).scrollTop());
+        }
+      }
+      else if($(window).width() >= 480) {
+        if ($(window).scrollTop() > 175) {
+          $('.scrolling-navbar').addClass('top-nav-collapse');
+          $('.scrolling-navbar').css('top', 175);
+        } else {
+          $('.scrolling-navbar').removeClass('top-nav-collapse');
+          $('.scrolling-navbar').css('top', 175-$(window).scrollTop());
+        }
+      }
+      else if($(window).width() <= 480) {
         if ($(window).scrollTop() > 200) {
-                      $('.scrolling-navbar').addClass('top-nav-collapse');
+          $('.scrolling-navbar').addClass('top-nav-collapse');
+          $('.scrolling-navbar').css('top', 200);
         } else {
           $('.scrolling-navbar').removeClass('top-nav-collapse');
           $('.scrolling-navbar').css('top', 200-$(window).scrollTop());

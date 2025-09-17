@@ -10,11 +10,22 @@
 
   // Sticky Nav
     $(window).on('scroll', function() {
-        if ($(window).scrollTop() > 200) {
+      if ($(window).width >= 768) {
+        if ($(window).scrollTop() > 100) {
             $('.scrolling-navbar').addClass('top-nav-collapse');
         } else {
             $('.scrolling-navbar').removeClass('top-nav-collapse');
+            $('.scrolling-navbar').css('top', 100-$(window).scrollTop());
         }
+      }
+      else{
+        if ($(window).scrollTop() > 200) {
+                      $('.scrolling-navbar').addClass('top-nav-collapse');
+        } else {
+          $('.scrolling-navbar').removeClass('top-nav-collapse');
+          $('.scrolling-navbar').css('top', 200-$(window).scrollTop());
+        }
+      }
     });
 
     /* ==========================================================================

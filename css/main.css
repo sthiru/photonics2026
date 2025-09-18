@@ -607,7 +607,7 @@ a.back-to-top:hover, a.back-to-top:focus {
 
 .navbar-expand-lg .navbar-toggler {
   background: transparent;
-  border: 1px solid #224195;
+  border: 1px solid #2babe2;
   background-image: linear-gradient(65deg, #224195 0, #2babe2 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -690,15 +690,15 @@ a.back-to-top:hover, a.back-to-top:focus {
   background: #224195;
 }
 
-@media (max-width: 480px) {
-  .navbar {
-    top: 200px;
-  }
-}
-
 @media (max-width: 768px) {
   .navbar {
     top: 175px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    top: 200px;
   }
 }
 

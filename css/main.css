@@ -2278,7 +2278,7 @@ footer {
 
 /* Logo Bar Styles */
 .logo-bar {
-  padding-top: 3%;
+  padding-top: 1%;
 }
 
 /* Logo Styles */
@@ -2306,4 +2306,10 @@ footer {
 
 #navbarCollapse ul {
   justify-content:space-between;
+}
+
+@media (min-width: 1800px) {
+    .container {
+        max-width: 1600px;
+    }
 }

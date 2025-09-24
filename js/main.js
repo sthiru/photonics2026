@@ -11,39 +11,39 @@
   // Sticky Nav
     $(window).on('scroll', function() {
       if ($(window).width() >= 992) {
-        if ($(window).scrollTop() > 100) {
+        if ($(window).scrollTop() > 150) {
             $('.scrolling-navbar').addClass('top-nav-collapse');
-            $('.scrolling-navbar').css('top', 100);
+            $('.scrolling-navbar').css('top', 150);
         } else {
             $('.scrolling-navbar').removeClass('top-nav-collapse');
-            $('.scrolling-navbar').css('top', 100-$(window).scrollTop());
+            $('.scrolling-navbar').css('top', 150-$(window).scrollTop());
         }
       }
       else if($(window).width() >= 768) {
-        if ($(window).scrollTop() > 130) {
+        if ($(window).scrollTop() > 180) {
           $('.scrolling-navbar').addClass('top-nav-collapse');
-          $('.scrolling-navbar').css('top', 130);
+          $('.scrolling-navbar').css('top', 180);
         } else {
           $('.scrolling-navbar').removeClass('top-nav-collapse');
-          $('.scrolling-navbar').css('top', 130-$(window).scrollTop());
+          $('.scrolling-navbar').css('top', 180-$(window).scrollTop());
         }
       }
       else if($(window).width() >= 480) {
-        if ($(window).scrollTop() > 175) {
-          $('.scrolling-navbar').addClass('top-nav-collapse');
-          $('.scrolling-navbar').css('top', 175);
-        } else {
-          $('.scrolling-navbar').removeClass('top-nav-collapse');
-          $('.scrolling-navbar').css('top', 175-$(window).scrollTop());
-        }
-      }
-      else if($(window).width() <= 480) {
         if ($(window).scrollTop() > 200) {
           $('.scrolling-navbar').addClass('top-nav-collapse');
           $('.scrolling-navbar').css('top', 200);
         } else {
           $('.scrolling-navbar').removeClass('top-nav-collapse');
           $('.scrolling-navbar').css('top', 200-$(window).scrollTop());
+        }
+      }
+      else if($(window).width() <= 480) {
+        if ($(window).scrollTop() > 250) {
+          $('.scrolling-navbar').addClass('top-nav-collapse');
+          $('.scrolling-navbar').css('top', 250);
+        } else {
+          $('.scrolling-navbar').removeClass('top-nav-collapse');
+          $('.scrolling-navbar').css('top', 250-$(window).scrollTop());
         }
       }
     });

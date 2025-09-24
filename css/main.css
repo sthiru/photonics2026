@@ -685,7 +685,7 @@ a.back-to-top:hover, a.back-to-top:focus {
 }
 
 .navbar {
-  top: 100px;
+  top: 160px;
   padding: 0;
   background: #224195;
 }
@@ -710,7 +710,12 @@ a.back-to-top:hover, a.back-to-top:focus {
 }
 
 .dropdown-toggle::after {
-  display: none;
+  content: '';
+  width: auto;
+  height: auto;
+  vertical-align: middle;
+  font-size: 16px;
+  margin-left: 5px;
 }
 
 .dropdown-menu {
@@ -2186,13 +2191,14 @@ footer {
 3. Hero Area
 ========================================================================== */
 .hero-area-bg {
-  background: url(../img/hero-area.jpg) no-repeat;
+  background: #224195;
   background-size: cover;
 }
 
 #hero-area {
   color: #fff;
   overflow: hidden;
+  min-height: 520px;
   position: relative;
 }
 
@@ -2223,15 +2229,19 @@ footer {
 
 .banner-container {
   text-align: right;
-  padding-top: 1%;
+  padding-top: 3%;
 }
 
 .banner-info {
   font-size: 16px;
-  font-style: italic;
+  font-style: bold;
   line-height: 22px;
   color: #fff;
   align-items: end;
+  text-align: right;
+  letter-spacing: 2px;
+  font-weight: 800;
+  font-size: 18px;
 }
 
 #hero-area .contents .head-title {
@@ -2263,11 +2273,12 @@ footer {
 .logo-bar-area {
   background: linear-gradient(90deg, #2baae1 0%, #8f3f98 100%);
   padding: 1rem;
+  min-height: 160px;
 }
 
 /* Logo Bar Styles */
 .logo-bar {
-  padding: 0.5rem;
+  padding-top: 3%;
 }
 
 /* Logo Styles */
@@ -2276,7 +2287,23 @@ footer {
   float: left;
 }
 
-.logo-bar h2 {
-  line-height: inherit;
+.banner-desc {
+  font-size: 17px;
+  font-weight: 400;
   color: #fff;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+
+.head-title {
+  color: #fff;
+  font-size: 48px;
+  line-height: 48px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+#navbarCollapse ul {
+  justify-content:space-between;
 }

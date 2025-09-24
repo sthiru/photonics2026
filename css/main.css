@@ -848,7 +848,10 @@ a.back-to-top:hover, a.back-to-top:focus {
 }
 
 #about {
-  background: #F6F9F9;
+  background-image: url('/img/about-bg.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .about-content {

@@ -859,7 +859,7 @@ a.back-to-top:hover, a.back-to-top:focus {
 .about-content .about-text h2 {
   font-size: 40px;
   font-weight: 700;
-  color: #dfd816;
+  color: #ffc107;
   }
 
 .about-content .about-text h6 {
@@ -2318,4 +2318,41 @@ footer {
 
 p {
   font-size: 18px;
+}
+
+/* Program UL Styles */
+.program ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: #224195; /* blue background */
+  width: 100%; /* adjust the width as needed */
+  height: 80vh; /* adjust the height as needed */
+  overflow-y: auto;
+}
+
+.program ul li {
+  padding: 30px;
+  padding-left: 30px;
+  border-bottom: 1px solid #044071;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.program ul li a {
+  color: #fff;
+  padding: 30px;
+  text-decoration: none;
+}
+
+.program ul li:hover {
+  color: #e87722; /* orange highlight on hover */
+  background-color: #00629b;
+  border-left: #e87722 5px solid;
+}
+
+.program ul li.active {
+  color: #e87722; /* orange highlight on active */
+  background-color: #00629b; /* darker blue background on active */
+  border-left: #e87722 5px solid;
 }

@@ -123,4 +123,43 @@
 
   });      
 
+  // Get the ul element
+const programUl = document.querySelector('.program ul');
+
+// Get the li elements
+const programLi = programUl.querySelectorAll('li');
+
+// Add event listener to the li elements
+programLi.forEach((li) => {
+  li.addEventListener('click', (e) => {
+    // Get the current target
+    const currentTarget = e.currentTarget.querySelector('a');
+
+    // Remove the active class from all li elements
+    programUl.querySelectorAll('a').forEach((a) => {
+      a.classList.remove('active');
+    });
+    programUl.querySelectorAll('li').forEach((li) => {
+      li.classList.remove('active');
+    });
+
+    // Add the active class to the current target
+    currentTarget.classList.add('active');
+    e.currentTarget.classList.add('active');
+
+    // Get the id of the current target
+    const id = currentTarget.getAttribute('href').replace('#', '');
+
+    // Hide all content
+    const content = document.querySelector('.speaker-wrapper');
+    content.querySelectorAll('.speaker').forEach((c) => {
+      c.style.display = 'none';
+    });
+
+    // Show the selected content
+    const selectedContent = document.getElementById(id);
+    selectedContent.style.display = 'flex';
+  });
+});
+
 }(jQuery));

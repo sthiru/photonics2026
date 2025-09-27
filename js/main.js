@@ -123,6 +123,17 @@
 
   });      
 
+  // Get the topics ul element
+const topicsUl = document.querySelector('.topics ul');
+
+// Add event listener to the li elements
+topicsUl.addEventListener('click', (e) => {
+  if (e.target.tagName === 'LI' || e.target.parentNode.tagName === 'LI') {
+    const li = e.target.tagName === 'LI' ? e.target : e.target.parentNode;
+    li.classList.toggle('active');
+    li.querySelector('.title').classList.toggle('active');
+  }
+});
   // Get the ul element
 const programUl = document.querySelector('.program ul');
 

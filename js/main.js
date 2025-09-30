@@ -8,6 +8,11 @@
     ========================================================*/
     $('#preloader').fadeOut();
 
+    if($(window).scrollTop() > 300)
+    {
+      $('.scrolling-navbar').css('top',0);
+    }
+
   // Sticky Nav
     $(window).on('scroll', function() {
       if ($(window).width() >= 992) {

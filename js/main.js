@@ -128,54 +128,65 @@
 
   });      
 
+if (window.location.pathname.startsWith('/papper')) {
   // Get the topics ul element
-const topicsUl = document.querySelector('.topics ul');
+  const topicsUl = document.querySelector('.topics ul');
 
-// Add event listener to the li elements
-topicsUl.addEventListener('click', (e) => {
-  if (e.target.tagName === 'LI' || e.target.parentNode.tagName === 'LI') {
-    const li = e.target.tagName === 'LI' ? e.target : e.target.parentNode;
-    li.classList.toggle('active');
-    li.querySelector('.title').classList.toggle('active');
-  }
-});
-  // Get the ul element
-const programUl = document.querySelector('.program ul');
-
-// Get the li elements
-const programLi = programUl.querySelectorAll('li');
-
-// Add event listener to the li elements
-programLi.forEach((li) => {
-  li.addEventListener('click', (e) => {
-    // Get the current target
-    const currentTarget = e.currentTarget.querySelector('a');
-
-    // Remove the active class from all li elements
-    programUl.querySelectorAll('a').forEach((a) => {
-      a.classList.remove('active');
-    });
-    programUl.querySelectorAll('li').forEach((li) => {
-      li.classList.remove('active');
-    });
-
-    // Add the active class to the current target
-    currentTarget.classList.add('active');
-    e.currentTarget.classList.add('active');
-
-    // Get the id of the current target
-    const id = currentTarget.getAttribute('href').replace('#', '');
-
-    // Hide all content
-    const content = document.querySelector('.speaker-wrapper');
-    content.querySelectorAll('.speaker').forEach((c) => {
-      c.style.display = 'none';
-    });
-
-    // Show the selected content
-    const selectedContent = document.getElementById(id);
-    selectedContent.style.display = 'flex';
+  // Add event listener to the li elements
+  topicsUl.addEventListener('click', (e) => {
+    if (e.target.tagName === 'LI' || e.target.parentNode.tagName === 'LI') {
+      const li = e.target.tagName === 'LI' ? e.target : e.target.parentNode;
+      li.classList.toggle('active');
+      li.querySelector('.title').classList.toggle('active');
+    }
   });
-});
+}
+
+// Check if the current page is /program
+if (window.location.pathname.startsWith('/program')) {
+  function speaker(targetId) {
+
+        // Hide all content
+        const content = document.querySelector('.speaker-wrapper');
+        content.querySelectorAll('.speaker').forEach((c) => {
+          c.style.display = 'none';
+        });
+
+        // Show the selected content
+        const selectedContent = document.getElementById(targetId);
+        selectedContent.style.display = 'flex';
+  }
+  
+  speaker(window.location.hash.replace('#', ''));
+  // Get the ul element
+  const programUl = document.querySelector('.program ul');
+
+  // Get the li elements
+  const programLi = programUl.querySelectorAll('li');
+
+  // Add event listener to the li elements
+  programLi.forEach((li) => {
+    li.addEventListener('click', (e) => {
+      // Get the current target
+      const currentTarget = e.currentTarget.querySelector('a');
+
+      // Remove the active class from all li elements
+      programUl.querySelectorAll('a').forEach((a) => {
+        a.classList.remove('active');
+      });
+      programUl.querySelectorAll('li').forEach((li) => {
+        li.classList.remove('active');
+      });
+
+      // Add the active class to the current target
+      currentTarget.classList.add('active');
+      e.currentTarget.classList.add('active');
+
+      const targetId = currentTarget.getAttribute('href').replace('#', '');
+      // Get the id of the current target
+      speaker(targetId);
+    });
+  });
+}
 
 }(jQuery));

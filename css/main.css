@@ -2436,6 +2436,16 @@ p {
 
 .verticalRegistration {
   padding-top: 50px;
-  background-color: coral;
-  height: 60vh;
+  background-color: #772583;
+  background-image: url('/img/reg-bg.png');
+  background-size: contain;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  height: 70vh;
+}
+
+.verticalRegistration h3{
+  text-align: center;
+  padding: 20px 0;
+  color: #fff;
 }

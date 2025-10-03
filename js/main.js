@@ -145,16 +145,18 @@ if (window.location.pathname.startsWith('/papper')) {
 // Check if the current page is /program
 if (window.location.pathname.startsWith('/program')) {
   function speaker(targetId) {
+    
+    const selectedContent = document.getElementById(targetId);
+    if (selectedContent !== null) {
+      // Hide all content
+      const content = document.querySelector('.speaker-wrapper');
+      content.querySelectorAll('.speaker').forEach((c) => {
+        c.style.display = 'none';
+      });
 
-        // Hide all content
-        const content = document.querySelector('.speaker-wrapper');
-        content.querySelectorAll('.speaker').forEach((c) => {
-          c.style.display = 'none';
-        });
-
-        // Show the selected content
-        const selectedContent = document.getElementById(targetId);
-        selectedContent.style.display = 'flex';
+      // Show the selected content
+      selectedContent.style.display = 'flex';
+    }
   }
   
   speaker(window.location.hash.replace('#', ''));

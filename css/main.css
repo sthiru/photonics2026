@@ -683,11 +683,17 @@ a.back-to-top:hover, a.back-to-top:focus {
   .navbar {
     top: 175px;
   }
+  #hero-area {
+    min-height: 280px !important;
+  }
 }
 
 @media (max-width: 480px) {
   .navbar {
-    top: 200px;
+    top: 260px;
+  }
+  #hero-area {
+    min-height: 240px !important;
   }
 }
 
@@ -2188,16 +2194,12 @@ footer {
 /* ==========================================================================
 3. Hero Area
 ========================================================================== */
-.hero-area-bg {
-  background: #224195;
-  background-size: cover;
-}
-
 #hero-area {
-  color: #fff;
+  color: #224195;
   overflow: hidden;
   min-height: 520px;
   position: relative;
+  background-size: cover;
 }
 
 #hero-area .overlay {

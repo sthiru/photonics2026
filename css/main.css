@@ -1134,27 +1134,14 @@ h1 {
 
 /* Sponsors Area */
 #sponsors {
-  
-  background-attachment: scroll;
-  background-size: auto auto;
-  background-size: cover;
-  background-attachment: fixed;
   position: relative;
-}
-
-#sponsors .section-title-header .section-title {
-  color: #fff;
-}
-
-#sponsors .section-title-header p {
-  color: #fff;
 }
 
 #sponsors .sponsors-logo a img {
   margin: 30px;
 }
 
-#sponsors .spnsors-logo:hover {
+#sponsors .sponsors-logo a img:hover {
   border-color: transparent;
   box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.2);
 }
@@ -1664,12 +1651,12 @@ h1 {
 }
 
 /* Contact Forme */
-#google-map-area {
+#contact-header-area {
   position: relative;
   margin-bottom: 70px;
 }
 
-#google-map-area .container-fluid {
+#contact-header-area .container-fluid {
   padding-left: 0;
   padding-right: 0;
 }
@@ -2444,6 +2431,7 @@ p {
   background-position: bottom center;
   background-repeat: no-repeat;
   height: 70vh;
+  position: sticky;
 }
 
 .verticalRegistration h3{

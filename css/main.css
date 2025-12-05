@@ -1809,19 +1809,17 @@ h1 {
 
 /* Footer Area Start */
 footer {
-  background: #161E26;
+  background: #F5F5F5;
   text-align: center;
 }
 
 .site-info {
   position: relative;
-  padding: 30px 0;
-  margin-bottom: 30px;
 }
 
 .site-info p {
   font-size: 13px;
-  color: #9e9e9e;
+  color: #000000;
 }
 
 .site-info a {
@@ -1962,7 +1960,31 @@ footer {
 }
 
 .footer-logo {
-  margin-bottom: 50px;
+  margin: 50px;
+}
+
+.footer-contact {
+  text-align-last: start;
+}
+
+.footer-contact li {
+  padding: 10px;
+}
+
+.footer-links{
+  text-align-last: start;
+}
+
+.footer-links li{
+  padding: 5px 0px 5px 0px;
+}
+
+.footer-links li a {
+  color: #000000;
+}
+
+.footer-links li a:hover{
+  color: #0077B5;
 }
 
 /* ==========================================================================
@@ -2316,13 +2338,12 @@ p {
   padding: 0;
   background-color: #224195; /* blue background */
   width: 100%; /* adjust the width as needed */
-  height: 80vh; /* adjust the height as needed */
+  height: 60vh; /* adjust the height as needed */
   overflow-y: auto;
 }
 
 .program ul li {
-  padding: 30px;
-  padding-left: 30px;
+  padding: 20px;
   border-bottom: 1px solid #044071;
   font-size: 18px;
   font-weight: bold;

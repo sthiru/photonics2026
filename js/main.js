@@ -128,7 +128,7 @@
 
   });      
 
-if (window.location.pathname.startsWith('/papper')) {
+if (window.location.pathname.startsWith('/topics')) {
   // Get the topics ul element
   const topicsUl = document.querySelector('.topics ul');
 

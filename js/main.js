@@ -155,10 +155,11 @@ if (window.location.pathname.startsWith('/program')) {
       });
 
       // Show the selected content
-      selectedContent.style.display = 'flex';
+      selectedContent.style.display = 'block';
     }
   }
-  
+  $('.scrolling-navbar').removeClass('top-nav-collapse');
+  $('.scrolling-navbar').css('top', 0);
   speaker(window.location.hash.replace('#', ''));
   // Get the ul element
   const programUl = document.querySelector('.program ul');

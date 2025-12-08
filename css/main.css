@@ -1067,6 +1067,15 @@ h1 {
   outline: none;
 }
 
+.carousel-item img{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: fill;
+  width: 100%;
+}
+
 .counter-section {
   background: url(../img/background/countdown.jpg) no-repeat center;
   background-size: auto auto;

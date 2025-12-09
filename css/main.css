@@ -1369,11 +1369,11 @@ h1 {
 }
 
 #information-bar .inforation-wrapper {
-  background: #fff;
+  background-image: linear-gradient(65deg, #224195 0, #439df1 100%);
+  box-shadow: 0 16px 48px #E2E8ED;
   border-radius: 4px;
-  box-shadow: 0 8px 24px #E2E8ED;
   margin-bottom: -35px;
-  margin-top: -35px;
+  
   padding: 45px 0;
   position: relative;
   top: -40px;
@@ -2082,29 +2082,44 @@ footer {
   position: relative;
 }
 
-#pricing .price-block-wrapper {
+#carouselExampleIndicators .carousel-control-next,
+#carouselExampleIndicators .carousel-control-prev /*, .carousel-indicators */ {
+    filter: invert(100%);
+}
+
+.carousel .carousel-indicators li {
+  background-color: #fff;
+  background-color: rgba(70,70,70,.25);
+}
+
+.carousel .carousel-indicators .active {
+  background-color: #0077B5;
+}
+
+.price-block-wrapper {
   display: inline-block;
   width: 100%;
   text-align: center;
-  box-shadow: 0 8px 24px #E2E8ED;
   border-radius: 4px;
   background: #fff;
+  border: solid 1px #0077B5;
   padding: 50px 40px;
   -webkit-transition: all 300ms ease-in-out;
   -moz-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
+  box-shadow: 0 16px 48px #E2E8ED;
 }
 
-#pricing .price-block-wrapper .icon {
+.price-block-wrapper .icon {
   padding: 20px;
 }
 
-#pricing .price-block-wrapper .icon i {
+.price-block-wrapper .icon i {
   font-size: 60px;
   color: #224195;
 }
 
-#pricing .price-block-wrapper .colmun-title h5 {
+.price-block-wrapper .colmun-title h5 {
   font-size: 20px;
   color: #212121;
   margin-bottom: 20px;
@@ -2112,14 +2127,14 @@ footer {
   font-weight: 700;
 }
 
-#pricing .price-block-wrapper .price {
+.price-block-wrapper .price {
   padding-top: 10px;
   transition: all 500ms ease;
   -webkit-transition: all 500ms ease;
   -moz-transition: all 500ms ease;
 }
 
-#pricing .price-block-wrapper .price h2 {
+.price-block-wrapper .price h2 {
   font-size: 38px;
   background-image: linear-gradient(65deg, #224195 0, #439df1 100%);
   -webkit-background-clip: text;
@@ -2129,12 +2144,12 @@ footer {
   margin-bottom: 7px;
 }
 
-#pricing .price-block-wrapper .price span {
+.price-block-wrapper .price span {
   text-transform: uppercase;
   font-size: 13px;
 }
 
-#pricing .price-block-wrapper .price p {
+.price-block-wrapper .price p {
   font-size: 15px;
   color: #5c5c5c;
   font-weight: 700;
@@ -2146,15 +2161,15 @@ footer {
   -moz-transition: all 500ms ease;
 }
 
-#pricing .price-block-wrapper .pricing-list {
+.price-block-wrapper .pricing-list {
   padding: 15px 0;
 }
 
-#pricing .price-block-wrapper .pricing-list ul {
+.price-block-wrapper .pricing-list ul {
   padding-bottom: 15px;
 }
 
-#pricing .price-block-wrapper .pricing-list ul li {
+.price-block-wrapper .pricing-list ul li {
   position: relative;
   line-height: 40px;
   font-size: 15px;
@@ -2162,21 +2177,22 @@ footer {
   padding: 2px 0px;
 }
 
-#pricing .price-block-wrapper .pricing-list ul li i {
+.price-block-wrapper .pricing-list ul li i {
   margin-right: 7px;
   font-size: 12px;
   color: #224195;
 }
 
-#pricing .price-block-wrapper .btn i {
+.price-block-wrapper .btn i {
   font-size: 12px;
   margin-right: 5px;
 }
 
-#pricing .price-block-wrapper:hover {
+.price-block-wrapper:hover {
   box-shadow: 0 16px 48px #E2E8ED;
 }
 
+/*
 #pricing .active {
   background-image: linear-gradient(65deg, #224195 0, #439df1 100%);
   box-shadow: 0 16px 48px #E2E8ED;
@@ -2217,14 +2233,14 @@ footer {
   background: #fff;
   color: #212121;
 }
-
+*/
 /* ==========================================================================
 3. Hero Area
 ========================================================================== */
 #hero-area {
   color: #224195;
   overflow: hidden;
-  min-height: 520px;
+  min-height: 70vh;
   position: relative;
   background-size: cover;
 }

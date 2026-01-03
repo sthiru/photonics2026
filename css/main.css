@@ -1137,6 +1137,12 @@ h1 {
   font-weight: 700;
 }
 
+.counter-section .counter .counterUp:after { /* or :before */
+  content: "\002B";
+  font-size: 50px;
+  color: #fff;
+}
+
 /* Sponsors Area */
 #sponsors {
   position: relative;

@@ -2500,6 +2500,23 @@ p {
   position: sticky;
 }
 
+.conduct-section ul {
+  list-style: disc;
+  margin: 15px 0 15px 40px;
+  padding: 0;
+}
+
+.conduct-section ul li {
+  list-style: disc;
+  margin-bottom: 10px;
+  padding-left: 5px;
+}
+
+.conduct-section p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
 .verticalRegistration h3{
   text-align: center;
   padding: 20px 0;

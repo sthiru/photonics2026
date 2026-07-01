@@ -2492,6 +2492,17 @@ p {
 .verticalRegistration {
   padding-top: 50px;
   background-color: #772583;
+  background-image: url('/img/reg-bg2.png');
+  background-size: contain;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  height: 70vh;
+  position: sticky;
+}
+.verticalSubmission {
+  padding-top: 50px;
+  margin-bottom: 50px;
+  background-color: #772583;
   background-image: url('/img/reg-bg.png');
   background-size: contain;
   background-position: bottom center;
@@ -2518,6 +2529,12 @@ p {
 }
 
 .verticalRegistration h3{
+  text-align: center;
+  padding: 20px 0;
+  color: #fff;
+}
+
+.verticalSubmission h3{
   text-align: center;
   padding: 20px 0;
   color: #fff;

@@ -232,8 +232,27 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12 col-md-12 col-xs-12">
+            <style>
+              .new-badge {
+                display: inline-block;
+                background-color: #e63946;
+                color: #ffffff;
+                font-size: 0.65em;
+                font-weight: 700;
+                padding: 2px 8px;
+                border-radius: 12px;
+                margin-right: 8px;
+                vertical-align: middle;
+                animation: newBadgePulse 1.6s ease-in-out infinite;
+              }
+              @keyframes newBadgePulse {
+                0%   { transform: scale(1);    opacity: 1;   }
+                50%  { transform: scale(1.12); opacity: 0.75; }
+                100% { transform: scale(1);    opacity: 1;   }
+              }
+            </style>
             <marquee behavior="scroll" direction="left">
-                <h4 style="color: rgb(230 226 51);">Submissions deadline is extended to September 25, 2026.</h4>
+                <h4 style="color: rgb(230 226 51);"><span class="new-badge">NEW</span> Submissions deadline is extended to September 25, 2026.</h4>
               </marquee>
             <div class="about-content">
               <div>
@@ -506,6 +525,23 @@
       </div>
     </section>
     <!-- Ticket Pricing Area End -->
+
+    <!-- Deadline Countdown Start -->
+    <section id="deadline-count">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-10">
+            <div class="deadline-count-wrapper text-center">
+              <p class="deadline-count-label">Paper Submission Deadline: 25 September 2026</p>
+              <div class="time-countdown wow fadeInUp" data-wow-delay="0.2s">
+                <div id="deadlineClock" class="time-count"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Deadline Countdown End -->
 
     <!-- Information Bar Start -->
     <section id="information-bar">

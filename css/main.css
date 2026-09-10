@@ -2081,6 +2081,29 @@ footer {
   border-left: none;
 }
 
+#deadline-count {
+  background: #F6F9F9;
+  padding-bottom: 30px;
+}
+
+#deadline-count .deadline-count-wrapper {
+  background-color: #439df1;
+  border-radius: 4px;
+  box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.08);
+  padding: 15px 0 10px;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+#deadline-count .deadline-count-label {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 10px;
+  letter-spacing: 0.3px;
+}
+
 /* Pricing Ticket */
 #pricing {
   background: #f8fafa;

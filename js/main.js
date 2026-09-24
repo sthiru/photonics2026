@@ -64,7 +64,7 @@
       +'<div class="time-entry seconds"><span>%S</span> Seconds</div> '));
     });
 
-    jQuery('#deadlineClock').countdown('2026/09/25', function(event){
+    jQuery('#deadlineClock').countdown('2026/09/25 23:59:59', function(event){
       var $this = jQuery(this).html(event.strftime(''
       + '<div class="time-entry days"><span>%-D</span> <b>:</b> Days</div> '
       + '<div class="time-entry hours"><span>%H</span> <b>:</b> Hours</div> '

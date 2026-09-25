@@ -65,6 +65,10 @@
     });
 
     jQuery('#deadlineClock').countdown('2026/09/25 23:59:59', function(event){
+      if (event.elapsed) {
+        jQuery('#deadline-count').hide();
+        return;
+      }
       var $this = jQuery(this).html(event.strftime(''
       + '<div class="time-entry days"><span>%-D</span> <b>:</b> Days</div> '
       + '<div class="time-entry hours"><span>%H</span> <b>:</b> Hours</div> '

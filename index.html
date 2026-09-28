@@ -232,7 +232,28 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12 col-md-12 col-xs-12">
-                       <!-- Scrolling announcement banner removed 2026-09-28. Add a new <marquee> block here whenever a new announcement is needed. -->
+            <style>
+              .new-badge {
+                display: inline-block;
+                background-color: #e63946;
+                color: #ffffff;
+                font-size: 0.65em;
+                font-weight: 700;
+                padding: 2px 8px;
+                border-radius: 12px;
+                margin-right: 8px;
+                vertical-align: middle;
+                animation: newBadgePulse 1.6s ease-in-out infinite;
+              }
+              @keyframes newBadgePulse {
+                0%   { transform: scale(1);    opacity: 1;   }
+                50%  { transform: scale(1.12); opacity: 0.75; }
+                100% { transform: scale(1);    opacity: 1;   }
+              }
+            </style>
+            <marquee behavior="scroll" direction="left">
+                <h4 style="color: rgb(230 226 51);"><span class="new-badge">NEW</span> Submit your manuscript for the conference by September 30, 2026 (11:59 PM) <span class="new-badge">NEW</span></h4>
+              </marquee>
             <div class="about-content">
               <div>
                 <div class="about-text">  

@@ -85,6 +85,31 @@
       }
     })();
 
+    /* Feature switches for Submissions / Register / Payment buttons
+    ========================================================*/
+    (function() {
+      if (window.SUBMISSIONS_OPEN === false) {
+        jQuery('#submissions-btn').hide();
+        jQuery('#submissions-btn-topics').hide();
+      }
+      if (window.REGISTER_OPEN === false) {
+        jQuery('#register-btn').hide();
+        jQuery('#register-btn-topics').hide();
+      }
+      if (window.PAYMENT_OPEN === false) {
+        jQuery('#payment-btn-inr').hide();
+        jQuery('#payment-btn-usd').hide();
+      }
+
+      // Home page only: if just one of Submissions/Register is hidden,
+      // widen the remaining column to fill the row (no empty gap).
+      if (window.SUBMISSIONS_OPEN === false && window.REGISTER_OPEN !== false) {
+        jQuery('#register-btn').removeClass('col-lg-6 col-md-6').addClass('col-lg-12 col-md-12');
+      } else if (window.REGISTER_OPEN === false && window.SUBMISSIONS_OPEN !== false) {
+        jQuery('#submissions-btn').removeClass('col-lg-6 col-md-6').addClass('col-lg-12 col-md-12');
+      }
+    })();
+
     /* Auto Close Responsive Navbar on Click
     ========================================================*/
     function close_toggle() {

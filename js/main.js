@@ -76,6 +76,15 @@
       + '<div class="time-entry seconds"><span>%S</span> Seconds</div> '));
     });
 
+    /* Auto-hide submission banner after deadline
+    ========================================================*/
+    (function() {
+      var bannerCutoff = new Date('2026-09-30T18:35:00Z');
+      if (new Date() >= bannerCutoff) {
+        jQuery('#submission-banner').hide();
+      }
+    })();
+
     /* Auto Close Responsive Navbar on Click
     ========================================================*/
     function close_toggle() {

@@ -250,9 +250,41 @@
                 50%  { transform: scale(1.12); opacity: 0.75; }
                 100% { transform: scale(1);    opacity: 1;   }
               }
+              .badge-upcoming {
+                display: inline-block;
+                background-color: #f4a300;
+                color: #1a1a1a;
+                font-size: 0.65em;
+                font-weight: 700;
+                padding: 2px 8px;
+                border-radius: 12px;
+                margin-right: 8px;
+                vertical-align: middle;
+                animation: newBadgePulse 1.6s ease-in-out infinite;
+              }
+              .badge-open {
+                display: inline-block;
+                background-color: #2a9d8f;
+                color: #ffffff;
+                font-size: 0.65em;
+                font-weight: 700;
+                padding: 2px 8px;
+                border-radius: 12px;
+                margin-right: 8px;
+                vertical-align: middle;
+                animation: newBadgePulse 1.6s ease-in-out infinite;
+              }
             </style>
             <marquee id="submission-banner" behavior="scroll" direction="left">
-                <h4 style="color: rgb(230 226 51);"><span class="new-badge">NEW</span> Submit your manuscript for the conference by September 30, 2026 (11:59 PM) <span class="new-badge">NEW</span></h4>
+                <h4>
+                  &nbsp;&nbsp;&bull;&nbsp;&nbsp;
+                  <span class="new-badge">CLOSED</span> Regular Paper Submission for Photonics 2026 is now closed <span class="new-badge">CLOSED</span>
+                  &nbsp;&nbsp;&bull;&nbsp;&nbsp;
+                  <span class="badge-upcoming">OPENS OCT 15</span> Postdeadline paper submission will open from October 15, 2026 <span class="badge-upcoming">OPENS OCT 15</span>
+                  &nbsp;&nbsp;&bull;&nbsp;&nbsp;
+                  <span class="badge-open">OPEN</span> Early Bird Registration is Open <span class="badge-open">OPEN</span>
+                  &nbsp;&nbsp;&bull;&nbsp;&nbsp;
+                </h4>
               </marquee>
             <div class="about-content">
               <div>
@@ -534,11 +566,13 @@
     <section id="information-bar">
       <div class="container">
         <div class="row inforation-wrapper justify-content-center">
+          <!-- Button on/off switches feature (2026-09-30) - see assets/js/main.js for full removal notes -->
           <div class="col-lg-6 col-md-6 col-xs-12" id="submissions-btn">
             <div class="content text-center" style="padding-bottom: 10px;">
               <a href="./guidelines" class="btn btn-common btn-lg">Submissions</a>
             </div>
           </div>
+          <!-- Button on/off switches feature (2026-09-30) - see assets/js/main.js for full removal notes -->
           <div class="col-lg-6 col-md-6 col-xs-12" id="register-btn">
             <div class="content text-center">
               <a href="./registration" class="btn btn-common btn-lg">Register Here</a>
@@ -771,6 +805,7 @@
     <script src="/js/jquery.easing.min.js"></script>
     <script src="/js/wow.js"></script>
     <script src="/js/nivo-lightbox.js"></script>
+    <!-- Button on/off switches feature (2026-09-30) - see assets/js/main.js for full removal notes -->
     <script src="/js/submission-switch.js"></script>
     <script src="/js/main.js"></script>
   </body>

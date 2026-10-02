@@ -76,17 +76,18 @@
       + '<div class="time-entry seconds"><span>%S</span> Seconds</div> '));
     });
 
-    /* Auto-hide submission banner after deadline
-    ========================================================*/
-    (function() {
-      var bannerCutoff = new Date('2026-09-30T18:35:00Z');
-      if (new Date() >= bannerCutoff) {
-        jQuery('#submission-banner').hide();
-      }
-    })();
+    /* ============================================================
+       BEGIN: Button on/off switches feature (added 2026-09-30)
+       Controls the Submissions / Register / Payment buttons via
+       flags set in assets/js/submission-switch.js.
 
-    /* Feature switches for Submissions / Register / Payment buttons
-    ========================================================*/
+       To remove this feature entirely, also revert/delete:
+       - assets/js/submission-switch.js (whole file)
+       - templates/layout.html: the "<script src="/js/submission-switch.js">" line
+       - templates/home.html: id="submissions-btn", id="register-btn"
+       - templates/topics.html: id="submissions-btn-topics", id="register-btn-topics"
+       - templates/registration.html: id="payment-btn-inr", id="payment-btn-usd"
+       ============================================================*/
     (function() {
       if (window.SUBMISSIONS_OPEN === false) {
         jQuery('#submissions-btn').hide();
@@ -109,6 +110,7 @@
         jQuery('#submissions-btn').removeClass('col-lg-6 col-md-6').addClass('col-lg-12 col-md-12');
       }
     })();
+    /* END: Button on/off switches feature (2026-09-30) */
 
     /* Auto Close Responsive Navbar on Click
     ========================================================*/

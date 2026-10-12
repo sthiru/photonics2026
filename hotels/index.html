@@ -141,19 +141,41 @@
     
 
     
+  <style>
+    .hostel-new-badge {
+      display: inline-block;
+      background-color: #e63946;
+      color: #ffffff;
+      font-size: 0.8em;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 12px;
+      margin: 0 8px;
+      vertical-align: middle;
+      animation: hostelBadgePulse 1.6s ease-in-out infinite;
+    }
+    @keyframes hostelBadgePulse {
+      0%   { transform: scale(1);    opacity: 1;   }
+      50%  { transform: scale(1.12); opacity: 0.75; }
+      100% { transform: scale(1);    opacity: 1;   }
+    }
+  </style>
   <!-- Area Start-->
     <section id="travel" class="section-padding text-left">
       <div class="container">
          <div class="row">
           <div class="col-lg-12 col-md-12 col-xs-12">
             <div class="content">
-              <h2>Accommodation & Transportation</h2>
+              <h2 style="margin-top: 50px;">Accommodation & Transportation</h2>
               <p>
                 Hyderabad offers a wide range of accommodation options to suit different types of visitors, including luxury five-star hotels, comfortable mid-range properties, and budget-friendly stays. The city is well connected through the Outer Ring Road (ORR), providing easy access to major areas and the conference venue. 
               </p>
             </div>
           </div>
         </div>
+        <marquee id="hostel-accommodation-banner" behavior="scroll" direction="left" style="background-color: #fff3cd; border-left: 5px solid #f4a300; border-radius: 4px; color: #224195; font-size: 18px; font-weight: 600; padding: 10px 12px; margin-top: 10px;">
+          <span class="hostel-new-badge">NEW</span> Accommodation has been arranged at IITH Hostels for all students/postdocs participants at a nominal rate of &#8377;2000/person. Accommodation booking starts from October 25, 2026. <span class="hostel-new-badge">NEW</span>
+        </marquee>
         <div class="row" style="padding: 20px 0px 20px 0px;">
           <div class="col-lg-12 col-md-12 col-xs-12">
             <p class="lead">Following accommodation options are available on a payment basis for participants:</p>

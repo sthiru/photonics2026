@@ -95,12 +95,14 @@
        - templates/layout.html: the "<script src="/js/submission-switch.js">" line
        - templates/home.html: id="submissions-btn", id="register-btn"
        - templates/topics.html: id="submissions-btn-topics", id="register-btn-topics"
+       - templates/guidelines.html: id="submit-here-btn"
        - templates/registration.html: id="payment-btn-inr", id="payment-btn-usd"
        ============================================================*/
     (function() {
       if (window.SUBMISSIONS_OPEN === false) {
         jQuery('#submissions-btn').hide();
         jQuery('#submissions-btn-topics').hide();
+        jQuery('#submit-here-btn').hide();
       }
       if (window.REGISTER_OPEN === false) {
         jQuery('#register-btn').hide();

@@ -76,6 +76,15 @@
       + '<div class="time-entry seconds"><span>%S</span> Seconds</div> '));
     });
 
+    /* Auto-hide submission banner after deadline
+    ========================================================*/
+    (function() {
+      var bannerCutoff = new Date('2026-11-05T18:29:00Z'); // Nov 5, 2026, 11:59 PM IST
+      if (new Date() >= bannerCutoff) {
+        jQuery('#submission-banner').hide();
+      }
+    })();
+
     /* ============================================================
        BEGIN: Button on/off switches feature (added 2026-09-30)
        Controls the Submissions / Register / Payment buttons via

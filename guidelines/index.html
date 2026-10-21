@@ -141,6 +141,25 @@
     
 
     
+  <style>
+    @keyframes newBadgePulse {
+      0%   { transform: scale(1);    opacity: 1;   }
+      50%  { transform: scale(1.12); opacity: 0.75; }
+      100% { transform: scale(1);    opacity: 1;   }
+    }
+    .badge-new {
+      display: inline-block;
+      background-color: #e63946;
+      color: #ffffff;
+      font-size: 0.65em;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 12px;
+      margin-right: 8px;
+      vertical-align: middle;
+      animation: newBadgePulse 1.6s ease-in-out infinite;
+    }
+  </style>
   <!-- Area Start-->
     <section id="attendees" class="section-padding text-left">
       <div class="container">
@@ -152,6 +171,10 @@
             <p>Join us at photonics 2026 to showcase your latest research and innovations.
                Both oral and poster presentation offer you valuable opportunities for potential collaboration and networking.
             </p>
+            <div class="announcement-box" style="background-color: #fff3cd; border-left: 5px solid #f4a300; padding: 16px 20px; margin: 20px 0; border-radius: 6px;">
+              <h5 style="color: #224195; font-weight: 700; margin-bottom: 8px;"><span style="font-size: 1.8em; line-height: 0; vertical-align: middle;">&bull;</span>&nbsp;&nbsp;<span class="badge-new">NEW</span> Submission Status <span class="badge-new" style="margin: 0 0 0 8px;">NEW</span>&nbsp;&nbsp;<span style="font-size: 1.8em; line-height: 0; vertical-align: middle;">&bull;</span></h5>
+              <p style="margin: 0; color: #224195;">All authors will be notified of the acceptance or rejection of their manuscripts. Some reviews have been delayed due to the festival season; however, decisions are being communicated to authors on a rolling basis. We expect to complete the review process and communicate all decisions by October 25, 2026.</p>
+            </div>
             </div>
             <hr>
         </div>
@@ -191,11 +214,11 @@
                   </tr>
                   <tr>
                     <td>Notification of Acceptance</td>
-                    <td>20 Oct 2026</td>
+                    <td><s>20 Oct 2026</s><br>Before 25 Oct 2026</td>
                   </tr>
                   <tr>
                     <td>Technical Program Publication</td>
-                    <td>25 Oct 2026</td>
+                    <td>5 Nov 2026</td>
                   </tr>
                   <tr>
                     <td>Postdeadline Paper Submission Opens</td>

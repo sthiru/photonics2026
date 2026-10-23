@@ -1605,6 +1605,12 @@ h1 {
   color: #888;
 }
 
+.team-item .info-text p.position-nobel {
+  font-size: 14px;
+  font-weight: 600;
+  color: #B8860B;
+}
+
 .team-item .info-text span {
   display: -webkit-box;
   -webkit-line-clamp: 2;

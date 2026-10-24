@@ -252,3 +252,23 @@ if (window.location.pathname.startsWith('/program')) {
 }
 
 }(jQuery));
+
+// Auto-hide Submission Status notification plates after 11:59 PM IST, Oct 25 2026
+(function () {
+  var cutoffUTC = new Date('2026-10-25T18:29:00Z'); // 11:59 PM IST, Oct 25 2026
+
+  function hideExpiredNotices() {
+    if (new Date() >= cutoffUTC) {
+      var notices = document.querySelectorAll('.auto-hide-oct25');
+      notices.forEach(function (el) {
+        el.style.display = 'none';
+      });
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', hideExpiredNotices);
+  } else {
+    hideExpiredNotices();
+  }
+})();

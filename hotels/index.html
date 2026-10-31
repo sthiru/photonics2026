@@ -159,6 +159,43 @@
       50%  { transform: scale(1.12); opacity: 0.75; }
       100% { transform: scale(1);    opacity: 1;   }
     }
+    .accom-new-badge {
+      display: inline-block;
+      background-color: #e63946;
+      color: #ffffff;
+      font-size: 0.5em;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 12px;
+      vertical-align: middle;
+      animation: hostelBadgePulse 1.6s ease-in-out infinite;
+    }
+    /* uniform headings, text spacing and bulleted list across this page */
+    #travel h2,
+    #travel h3 {
+      border-bottom: groove;
+      padding-bottom: 8px;
+      margin-bottom: 16px;
+    }
+    #travel p {
+      line-height: 1.7;
+      margin-bottom: 8px;
+    }
+    #travel .badge-pill {
+      margin-bottom: 12px;
+    }
+    #travel .accom-points {
+      display: block;
+      padding-left: 22px;
+      margin-bottom: 0;
+    }
+    #travel .accom-points .list-group-item {
+      display: list-item;
+      list-style: disc;
+      font-size: 16px;
+      border: 0;
+      padding: 4px 0;
+    }
   </style>
   <!-- Area Start-->
     <section id="travel" class="section-padding text-left">
@@ -173,16 +210,12 @@
             </div>
           </div>
         </div>
-        <div class="announcement-box" style="background-color: #fff3cd; border-left: 5px solid #f4a300; padding: 16px 20px; margin: 20px 0; border-radius: 6px;">
-          <h5 style="color: #224195; font-weight: 700; margin-bottom: 8px;"><span style="font-size: 1.8em; line-height: 0; vertical-align: middle;">&bull;</span>&nbsp;&nbsp;<span class="hostel-new-badge">NEW</span> Accommodation Booking Status <span class="hostel-new-badge" style="margin: 0 0 0 8px;">NEW</span>&nbsp;&nbsp;<span style="font-size: 1.8em; line-height: 0; vertical-align: middle;">&bull;</span></h5>
-          <p style="margin: 0; color: #224195;">Accommodation has been arranged at IITH Hostels for all students/postdocs participants at a nominal rate of &#8377;2000/person for conference duration (5 nights), on a two-sharing room basis. Additional stay cost &#8377;500/- per person/night. Due to delay in notification of Acceptance, Accommodation booking starts from November 01, 2026 and closes on November 30, 2026.</p>
-        </div>
         <div class="row" style="padding: 20px 0px 20px 0px;">
           <div class="col-lg-12 col-md-12 col-xs-12">
             <p class="lead">Following accommodation options are available on a payment basis for participants:</p>
           </div>
           <div class="col-lg-6 col-md-6 col-xs-12">
-            <ul class="list-group list-group-flush">
+            <ul class="list-group list-group-flush accom-points">
               <li class="list-group-item"><a href="https://hostel.iith.ac.in/" target="_blank">IIT Hyderabad Hostels (IITH Hostels)</a></li>
               <li class="list-group-item"><a href="#igh">IIT Hyderabad International Guest House (IGH)</a></li>
               <li class="list-group-item">Kove stay (3 star)</li>
@@ -306,6 +339,19 @@
                 </tr>
               </tbody>
             </table>
+          </div>
+        </div>
+        <div class="row" style="padding: 20px 0px 20px 0px;" id="student-postdoc-accommodation">
+          <div class="col-lg-12 col-md-12 col-xs-12">
+            <h3>
+              <span class="accom-new-badge new-until-nov10" style="margin: 0 10px 0 0;">NEW</span>Students/Postdocs Accommodation Booking<span class="accom-new-badge new-until-nov10" style="margin: 0 0 0 10px;">NEW</span>
+            </h3>
+            For: <span class="badge badge-pill badge-success">Students/Postdocs</span>
+            <p>Accommodation has been arranged at IITH Hostels for all students/postdocs participants at a nominal rate of &#8377;2000/person for conference duration (5 nights), on a two-sharing room basis. Additional stay costs &#8377;500/- per person/night. Booking is open from November 01, 2026 and closes on November 30, 2026.</p>
+            <p>Accommodation at the IITH hostels is now open for students and postdoctoral researchers (Postdocs). Please confirm your booking by completing the registration form and making the payment by clicking the button below.</p>
+            <div class="text-center">
+              <a href="https://payments.iith.ac.in/Student_Accommodation_PHOTONICS" target="_blank" class="btn btn-common btn-lg">Book Your Accommodation</a>
+            </div>
           </div>
         </div>
       </div>

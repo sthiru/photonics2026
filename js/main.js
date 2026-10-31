@@ -272,3 +272,24 @@ if (window.location.pathname.startsWith('/program')) {
     hideExpiredNotices();
   }
 })();
+
+// Hide the NEW badge on the Students/Postdocs Accommodation section
+// after 11:59 PM IST, Nov 10 2026 (the section itself stays visible)
+(function () {
+  var cutoffUTC = new Date('2026-11-10T18:29:00Z'); // 11:59 PM IST, Nov 10 2026
+
+  function hideExpiredBadge() {
+    if (new Date() >= cutoffUTC) {
+      var badges = document.querySelectorAll('.new-until-nov10');
+      badges.forEach(function (el) {
+        el.style.display = 'none';
+      });
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', hideExpiredBadge);
+  } else {
+    hideExpiredBadge();
+  }
+})();

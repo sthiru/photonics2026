@@ -2587,3 +2587,16 @@ p {
 .min-height-300{
   min-height: 300px;
 }
+
+/* Home page Plenary Speakers (#speakers): on desktop widths keep the first three cards
+   on the first row and start the next row after them */
+@media (min-width: 992px) {
+  #speakers .row.justify-content-center::after {
+    content: "";
+    flex-basis: 100%;
+    order: 1;
+  }
+  #speakers .row.justify-content-center > :nth-child(n+4) {
+    order: 2;
+  }
+}

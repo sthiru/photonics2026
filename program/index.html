@@ -28,7 +28,25 @@
     <link rel="stylesheet" type="text/css" href="/css/main.css">
     <!-- Responsive Style -->
     <link rel="stylesheet" type="text/css" href="/css/responsive.css">
-
+    <style>
+      .schedule-new-badge {
+        display: inline-block;
+        background-color: #e63946;
+        color: #ffffff;
+        font-size: 0.55em;
+        font-weight: 700;
+        padding: 1px 5px;
+        border-radius: 8px;
+        margin-left: 6px;
+        vertical-align: middle;
+        animation: scheduleBadgePulse 1.6s ease-in-out infinite;
+      }
+      @keyframes scheduleBadgePulse {
+        0%   { transform: scale(1);    opacity: 1;   }
+        50%  { transform: scale(1.12); opacity: 0.75; }
+        100% { transform: scale(1);    opacity: 1;   }
+      }
+    </style>
   </head>
   <body>
 
@@ -98,7 +116,7 @@
                   <li><a class="dropdown-item" href="/program#tutorial">Tutorial Speakers</a></li>
                   <li><a class="dropdown-item" href="/program#invited">Invited Speakers</a></li>
                   <li><a class="dropdown-item" href="/program#industry">Industry Focus</a></li>
-                  <li><a class="dropdown-item" href="/program#schedule">Schedule</a></li>
+                  <li><a class="dropdown-item" href="/program#schedule">Schedule <span class="schedule-new-badge">NEW</span></a></li>
                   <li><a class="dropdown-item" href="/program#posters">Student Posters</a></li>
                   <li><a class="dropdown-item" href="/program#special">Special Events</a></li>
                   <li><a class="dropdown-item" href="/program#">Full Program</a></li>
@@ -170,7 +188,7 @@
               <li><a href="#tutorial">Tutorial Speakers</a></li>
               <li><a href="#invited">Invited Speakers</a></li>
               <li><a href="#industry">Industry Focus</a></li>
-              <li><a href="#schedule">Schedule</a></li>
+              <li><a href="#schedule">Schedule <span class="schedule-new-badge">NEW</span></a></li>
               <li><a href="#posters">Student Posters</a></li>
               <li><a href="#special">Special Events</a></li>
             </ul>

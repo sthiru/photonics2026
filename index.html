@@ -742,6 +742,46 @@
 
     <!-- Sponsors Section Start -->
     <section id="sponsors" class="section-padding">
+      <style>
+        .sponsor-columns{ display:flex; flex-wrap:wrap; align-items:center; }
+        .sponsor-tech-col{ flex:1 1 280px; text-align:center; padding:20px; }
+        .sponsor-divider{ display:none; }
+        .sponsor-list-col{ flex:2 1 560px; padding:20px; }
+        @media (min-width:992px){
+          .sponsor-divider{ display:block; width:1px; background:#dfe3ea; align-self:stretch; margin:0 10px; }
+        }
+        .sponsor-tier-row{ margin-bottom:28px; }
+        .sponsor-tier-row:last-child{ margin-bottom:0; }
+        .sponsor-tier-label{
+          display:block; font-size:11px; letter-spacing:.08em; text-transform:uppercase;
+          font-weight:600; margin-bottom:10px;
+        }
+        .sponsor-tier-label.platinum{ color:#4d5b6b; }
+        .sponsor-tier-label.diamond{ color:#2a6fdb; }
+        .sponsor-tier-label.gold{ color:#b8860b; }
+        .sponsor-tier-label.silver{ color:#b0b0b0; }
+        .sponsor-logos-static{ display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:18px; }
+        .sponsor-logos-static img.platinum-logo{ max-height:130px; }
+        .sponsor-logos-static img.diamond-logo{ max-height:78px; }
+        .sponsor-logos-static img.silver-logo{ max-height:28px; }
+        .gold-carousel-stage{
+          position:relative; width:100%; max-width:560px; height:130px;
+          perspective:1000px; margin:0 auto;
+        }
+        .gold-carousel-track{
+          position:absolute; inset:0; transform-style:preserve-3d;
+          animation:goldCarouselSpin 20s linear infinite;
+        }
+        .gold-carousel-stage:hover .gold-carousel-track{ animation-play-state:paused; }
+        .gold-carousel-item{
+          position:absolute; top:50%; left:50%;
+          width:150px; height:70px; margin:-35px 0 0 -75px;
+          display:flex; align-items:center; justify-content:center;
+          backface-visibility:hidden;
+        }
+        .gold-carousel-item img{ max-height:55px; max-width:130px; }
+        @keyframes goldCarouselSpin{ from{ transform:rotateY(0deg); } to{ transform:rotateY(360deg); } }
+      </style>
       <div class="container">
         <div class="row">
           <div class="col-12">
@@ -752,13 +792,327 @@
             </div>
           </div>
         </div>
-        <div class="row mb-30 text-center wow fadeInDown" data-wow-delay="0.3s">
-          <div class="col-lg-12">
-            <div class="sponsors-logo">
-              <!-- Sponsor logos are dynamically loaded from /content/sponsors/ folder -->
-              
-                <a href=""><img src="sponsors/Optica Logo.png" alt="sponsor logo" style="max-height: 120px; margin: 10px;"></a>
-              
+        <div class="row mb-30 wow fadeInDown" data-wow-delay="0.3s">
+          <div class="col-12">
+            <div class="sponsor-columns">
+              <div class="sponsor-tech-col">
+                <h5 style="text-transform:uppercase; font-size:13px; letter-spacing:.06em; color:#64708a; margin-bottom:14px;">Technically Supported by</h5>
+                
+                  
+                  
+                
+                  
+                  
+                
+                  
+                  
+                
+                  
+                  
+                
+                  
+                  
+                
+                  
+                  
+                
+                  
+                  
+                
+                  
+                  
+                
+                  
+                  
+                    <img src="sponsors/Optica Logo.png" alt="technical support logo" style="max-height: 110px;">
+                  
+                
+                  
+                  
+                
+                  
+                  
+                
+                  
+                  
+                
+                  
+                  
+                
+                  
+                  
+                
+              </div>
+
+              <div class="sponsor-divider"></div>
+
+              <div class="sponsor-list-col">
+                <h5 style="text-transform:uppercase; font-size:13px; letter-spacing:.06em; color:#64708a; margin-bottom:14px; text-align:center;">Sponsored By</h5>
+
+                <div class="sponsor-tier-row">
+                  <div style="text-align:center;"><span class="sponsor-tier-label platinum">Platinum</span></div>
+                  <div class="sponsor-logos-static">
+                    
+                      
+                      
+                    
+                      
+                      
+                    
+                      
+                      
+                    
+                      
+                      
+                    
+                      
+                      
+                    
+                      
+                      
+                    
+                      
+                      
+                    
+                      
+                      
+                    
+                      
+                      
+                    
+                      
+                      
+                        <img class="platinum-logo" src="sponsors/platinum-sterlite-technologies.png" alt="platinum sponsor logo">
+                      
+                    
+                      
+                      
+                    
+                      
+                      
+                    
+                      
+                      
+                    
+                      
+                      
+                    
+                  </div>
+                </div>
+
+                <div class="sponsor-tier-row">
+                  <div style="text-align:center;"><span class="sponsor-tier-label diamond">Diamond</span></div>
+                  <div class="sponsor-logos-static">
+                    
+                      
+                      
+                    
+                      
+                      
+                    
+                      
+                      
+                    
+                      
+                      
+                    
+                      
+                      
+                    
+                      
+                      
+                    
+                      
+                      
+                    
+                      
+                      
+                    
+                      
+                      
+                    
+                      
+                      
+                    
+                      
+                      
+                        <img class="diamond-logo" src="sponsors/diamond-melss-exfo.png" alt="diamond sponsor logo">
+                      
+                    
+                      
+                      
+                    
+                      
+                      
+                    
+                      
+                      
+                    
+                  </div>
+                </div>
+
+                <div class="sponsor-tier-row">
+                  <div style="text-align:center;"><span class="sponsor-tier-label gold">Gold</span></div>
+                  <div class="gold-carousel-stage">
+                    <div class="gold-carousel-track">
+                      
+                      
+                        
+                        
+                      
+                        
+                        
+                          
+                        
+                      
+                        
+                        
+                          
+                        
+                      
+                        
+                        
+                          
+                        
+                      
+                        
+                        
+                          
+                        
+                      
+                        
+                        
+                          
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                          
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                          
+                        
+                      
+                        
+                        
+                          
+                        
+                      
+                        
+                        
+                          
+                        
+                      
+                      
+                      
+                        <div class="gold-carousel-item" style="transform: rotateY(0.0deg) translateZ(260px);">
+                          <img src="sponsors/gold-melss.png" alt="gold sponsor logo">
+                        </div>
+                      
+                        <div class="gold-carousel-item" style="transform: rotateY(40.0deg) translateZ(260px);">
+                          <img src="sponsors/gold-keysight.png" alt="gold sponsor logo">
+                        </div>
+                      
+                        <div class="gold-carousel-item" style="transform: rotateY(80.0deg) translateZ(260px);">
+                          <img src="sponsors/gold-hfcl.png" alt="gold sponsor logo">
+                        </div>
+                      
+                        <div class="gold-carousel-item" style="transform: rotateY(120.0deg) translateZ(260px);">
+                          <img src="sponsors/gold-yokogawa.png" alt="gold sponsor logo">
+                        </div>
+                      
+                        <div class="gold-carousel-item" style="transform: rotateY(160.0deg) translateZ(260px);">
+                          <img src="sponsors/gold-atos.png" alt="gold sponsor logo">
+                        </div>
+                      
+                        <div class="gold-carousel-item" style="transform: rotateY(200.0deg) translateZ(260px);">
+                          <img src="sponsors/gold-edmund-optics.png" alt="gold sponsor logo">
+                        </div>
+                      
+                        <div class="gold-carousel-item" style="transform: rotateY(240.0deg) translateZ(260px);">
+                          <img src="sponsors/gold-thorlabs.png" alt="gold sponsor logo">
+                        </div>
+                      
+                        <div class="gold-carousel-item" style="transform: rotateY(280.0deg) translateZ(260px);">
+                          <img src="sponsors/gold-axiscades.png" alt="gold sponsor logo">
+                        </div>
+                      
+                        <div class="gold-carousel-item" style="transform: rotateY(320.0deg) translateZ(260px);">
+                          <img src="sponsors/gold-htl.png" alt="gold sponsor logo">
+                        </div>
+                      
+                    </div>
+                  </div>
+                </div>
+
+                <div class="sponsor-tier-row">
+                  <div style="text-align:center;"><span class="sponsor-tier-label silver">Silver</span></div>
+                  <div class="sponsor-logos-static">
+                    
+                      
+                      
+                        <img class="silver-logo" src="sponsors/silver-shimadzu.png" alt="silver sponsor logo">
+                      
+                    
+                      
+                      
+                    
+                      
+                      
+                    
+                      
+                      
+                    
+                      
+                      
+                    
+                      
+                      
+                    
+                      
+                      
+                        <img class="silver-logo" src="sponsors/silver-britton-innotech.png" alt="silver sponsor logo">
+                      
+                    
+                      
+                      
+                    
+                      
+                      
+                    
+                      
+                      
+                    
+                      
+                      
+                    
+                      
+                      
+                    
+                      
+                      
+                    
+                      
+                      
+                    
+                  </div>
+                </div>
+
+              </div>
             </div>
           </div>
         </div>

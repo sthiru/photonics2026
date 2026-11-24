@@ -167,11 +167,22 @@
 
     
   <style>
-    .our-sponsors-tier{ margin-bottom:48px; }
+    .our-sponsors-tier{
+      margin-bottom:40px; border-radius:10px; padding:28px 20px;
+      border:1px solid transparent;
+    }
     .our-sponsors-tier:last-child{ margin-bottom:0; }
+    .our-sponsors-tier.platinum-tier{ border-color:#5b6b82; background:rgba(91,107,130,0.06); }
+    .our-sponsors-tier.diamond-tier{ border-color:#3b82f6; background:rgba(59,130,246,0.06); }
+    .our-sponsors-tier.gold-tier{ border-color:#d4a017; background:rgba(212,160,23,0.07); }
+    .our-sponsors-tier.silver-tier{ border-color:#c0c0c0; background:rgba(192,192,192,0.08); }
     .our-sponsors-tier-label{
       display:block; text-align:center; font-size:13px; letter-spacing:.08em; text-transform:uppercase;
-      font-weight:700; color:#64708a; margin-bottom:20px;
+      font-weight:800; color:#64708a; margin-bottom:20px;
+    }
+    .our-sponsors-tier-label::after{
+      content:""; display:block; width:220px; height:2px; margin:8px auto 0 auto;
+      background:currentColor;
     }
     .our-sponsors-tier-label.platinum{ color:#5b6b82; }
     .our-sponsors-tier-label.diamond{ color:#3b82f6; }
@@ -205,8 +216,8 @@
         </div>
       </div>
 
-      <div class="our-sponsors-tier">
-        <span class="our-sponsors-tier-label platinum">Platinum</span>
+      <div class="our-sponsors-tier platinum-tier">
+        <span class="our-sponsors-tier-label platinum">Platinum Sponsors</span>
         <div class="our-sponsors-logos">
           
             
@@ -292,8 +303,8 @@
         </div>
       </div>
 
-      <div class="our-sponsors-tier">
-        <span class="our-sponsors-tier-label diamond">Diamond</span>
+      <div class="our-sponsors-tier diamond-tier">
+        <span class="our-sponsors-tier-label diamond">Diamond Sponsors</span>
         <div class="our-sponsors-logos">
           
             
@@ -379,8 +390,8 @@
         </div>
       </div>
 
-      <div class="our-sponsors-tier">
-        <span class="our-sponsors-tier-label gold">Gold</span>
+      <div class="our-sponsors-tier gold-tier">
+        <span class="our-sponsors-tier-label gold">Gold Sponsors</span>
         
         
         
@@ -1075,8 +1086,8 @@
         </div>
       </div>
 
-      <div class="our-sponsors-tier">
-        <span class="our-sponsors-tier-label silver">Silver</span>
+      <div class="our-sponsors-tier silver-tier">
+        <span class="our-sponsors-tier-label silver">Silver Sponsors</span>
         <div class="our-sponsors-silver-grid">
           
           

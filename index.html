@@ -759,61 +759,76 @@
     <!-- Sponsors Section Start -->
     <section id="sponsors" class="section-padding">
       <style>
-        .sponsor-columns{ display:flex; flex-wrap:wrap; align-items:center; }
-        .sponsor-tech-col{ flex:1 1 280px; text-align:center; padding:20px; }
-        .sponsor-divider{ display:none; }
-        .sponsor-list-col{ flex:2 1 560px; padding:20px; }
-        @media (min-width:992px){
-          .sponsor-divider{ display:block; width:1px; background:#dfe3ea; align-self:stretch; margin:0 10px; }
+        .tech-sponsor-featured{
+          background:linear-gradient(180deg, #fbfcfd 0%, #eef1f5 100%);
+          border:1px solid #e3e7ee; border-radius:16px;
+          padding:48px 24px; text-align:center; margin-bottom:44px;
         }
-        .sponsor-tier-row{ margin-bottom:28px; }
-        .sponsor-tier-row:last-child{ margin-bottom:0; }
-        .sponsor-tier-label{
-          display:block; font-size:11px; letter-spacing:.08em; text-transform:uppercase;
-          font-weight:600; margin-bottom:10px;
+        .tech-sponsor-label{
+          font-size:12px; letter-spacing:.14em; text-transform:uppercase;
+          font-weight:800; color:#64708a; margin-bottom:26px;
         }
-        .sponsor-tier-label.platinum{ color:#4d5b6b; }
-        .sponsor-tier-label.diamond{ color:#2a6fdb; }
-        .sponsor-tier-label.gold{ color:#b8860b; }
-        .sponsor-tier-label.silver{ color:#b0b0b0; }
-        .sponsor-logos-static{ display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:18px; }
-        .sponsor-logos-static img.platinum-logo{ max-height:78px; }
-        .sponsor-logos-static img.diamond-logo{ max-height:62px; }
-        .sponsor-logos-static img.silver-logo{ max-height:28px; }
-        .gold-carousel-stage{
-          position:relative; width:100%; max-width:560px; height:130px;
-          perspective:1000px; margin:0 auto; overflow:hidden;
+        .tech-sponsor-label::after{
+          content:""; display:block; width:190px; height:1px; margin:8px auto 0 auto;
+          background:currentColor;
         }
-        .gold-carousel-track{
-          position:absolute; inset:0; transform-style:preserve-3d;
-          animation:goldCarouselSpin 32s linear infinite;
+        .tech-sponsor-featured img{ max-height:120px; max-width:280px; object-fit:contain; margin:0; }
+
+        .sponsors-carousel .carousel-item{ min-height:1px; }
+        .sponsors-slide{
+          min-height:420px; border-radius:16px; padding:44px 24px;
+          display:flex; flex-direction:column; align-items:center; justify-content:center;
         }
-        .gold-carousel-stage:hover .gold-carousel-track{ animation-play-state:paused; }
-        .gold-carousel-item{
-          position:absolute; top:50%; left:50%;
-          width:80px; height:38px; margin:-19px 0 0 -40px;
-          display:flex; align-items:center; justify-content:center;
-          backface-visibility:hidden;
+        .sponsors-slide-heading{
+          font-size:14px; letter-spacing:.12em; text-transform:uppercase;
+          font-weight:800; margin-bottom:30px; text-align:center;
         }
-        .gold-carousel-item img{ max-height:31px; max-width:70px; }
-        @keyframes goldCarouselSpin{ from{ transform:rotateY(0deg); } to{ transform:rotateY(360deg); } }
-        .silver-carousel-stage{
-          position:relative; width:100%; max-width:480px; height:90px;
-          perspective:1000px; margin:0 auto; overflow:hidden;
+        .sponsors-slide-heading::after{
+          content:""; display:block; width:190px; height:1px; margin:8px auto 0 auto;
+          background:currentColor;
         }
-        .silver-carousel-track{
-          position:absolute; inset:0; transform-style:preserve-3d;
-          animation:silverCarouselSpin 32s linear infinite;
+        .slide-pd-row{ display:flex; width:100%; max-width:860px; gap:20px; flex-wrap:wrap; justify-content:center; }
+        .pd-half{
+          flex:1 1 200px; border-radius:12px; padding:36px 20px; text-align:center;
+          display:flex; flex-direction:column; align-items:center; justify-content:center;
         }
-        .silver-carousel-stage:hover .silver-carousel-track{ animation-play-state:paused; }
-        .silver-carousel-item{
-          position:absolute; top:50%; left:50%;
-          width:120px; height:50px; margin:-25px 0 0 -60px;
-          display:flex; align-items:center; justify-content:center;
-          backface-visibility:hidden;
+        .pd-half.platinum-half{ background:#F1F2F2; }
+        .pd-half.diamond-half{ background:#EDF5FC; }
+        .pd-half-label{
+          font-size:12px; letter-spacing:.1em; text-transform:uppercase;
+          font-weight:800; margin-bottom:22px;
         }
-        .silver-carousel-item img{ max-height:32px; max-width:110px; }
-        @keyframes silverCarouselSpin{ from{ transform:rotateY(0deg); } to{ transform:rotateY(360deg); } }
+        .pd-half-label::after{
+          content:""; display:block; width:140px; height:1px; margin:8px auto 0 auto;
+          background:currentColor;
+        }
+        .pd-half-label.platinum{ color:#4d5b6b; }
+        .pd-half-label.diamond{ color:#2a6fdb; }
+        .pd-logo-box{ width:100%; height:100px; display:flex; align-items:center; justify-content:center; flex-wrap:wrap; gap:16px; }
+        .pd-logo-box img{ max-height:90px; max-width:90%; object-fit:contain; margin:0; }
+
+        .gold-slide{ background:#FFF7E5; }
+        .gold-slide .sponsors-slide-heading{ color:#b8860b; }
+        .silver-slide{ background:#F1F2F3; }
+        .silver-slide .sponsors-slide-heading{ color:#777; }
+
+        .tier-grid{
+          display:grid; gap:22px 18px; width:100%; max-width:980px; margin:0 auto;
+          justify-items:center; align-items:center;
+        }
+        .gold-grid{ grid-template-columns:repeat(5, 1fr); }
+        .silver-grid{ grid-template-columns:repeat(3, 1fr); max-width:620px; }
+        .tier-grid-logo-box{ width:100%; height:64px; display:flex; align-items:center; justify-content:center; }
+        .tier-grid-logo-box img{ max-height:56px; max-width:92%; object-fit:contain; margin:0; }
+
+        @media (max-width:767px){
+          .gold-grid{ grid-template-columns:repeat(3, 1fr); }
+          .silver-grid{ grid-template-columns:repeat(2, 1fr); }
+          .sponsors-slide{ padding:32px 16px; min-height:unset; }
+        }
+        @media (max-width:480px){
+          .pd-half{ flex-basis:100%; }
+        }
       </style>
       <div class="container">
         <div class="row">
@@ -825,189 +840,343 @@
             </div>
           </div>
         </div>
-        <div class="row mb-30 wow fadeInDown" data-wow-delay="0.3s">
+
+        <div class="row wow fadeInDown" data-wow-delay="0.3s">
           <div class="col-12">
-            <div class="sponsor-columns">
-              <div class="sponsor-tech-col">
-                <h5 style="text-transform:uppercase; font-size:13px; letter-spacing:.06em; color:#64708a; margin-bottom:14px;">Technically Supported by</h5>
+            <div class="tech-sponsor-featured">
+              <div class="tech-sponsor-label">Technically Supported by</div>
+              
                 
-                  
-                  
                 
-                  
-                  
+              
                 
-                  
-                  
                 
-                  
-                  
-                    <img src="sponsors/Optica Logo.png" alt="technical support logo" style="max-height: 110px;">
-                  
+              
                 
-                  
-                  
                 
-                  
-                  
+              
                 
-                  
-                  
                 
-                  
-                  
+                  <img src="sponsors/Optica Logo.png" alt="technical sponsor logo">
                 
-                  
-                  
+              
                 
-                  
-                  
                 
-                  
-                  
+              
                 
-                  
-                  
                 
-                  
-                  
+              
                 
-                  
-                  
                 
-                  
-                  
+              
                 
-                  
-                  
                 
-                  
-                  
+              
                 
-                  
-                  
                 
-                  
-                  
+              
                 
-                  
-                  
                 
-                  
-                  
+              
                 
-                  
-                  
                 
-                  
-                  
+              
                 
-                  
-                  
                 
-                  
-                  
+              
                 
-                  
-                  
                 
-              </div>
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+            </div>
+          </div>
+        </div>
 
-              <div class="sponsor-divider"></div>
-
-              <div class="sponsor-list-col">
-                <h5 style="text-transform:uppercase; font-size:13px; letter-spacing:.06em; color:#64708a; margin-bottom:14px; text-align:center;">Sponsored By</h5>
-
-                <div class="sponsor-tier-row">
-                  <div style="text-align:center;"><span class="sponsor-tier-label platinum">Platinum</span></div>
-                  <div class="sponsor-logos-static">
-                    
-                      
-                      
-                    
-                      
-                      
-                    
-                      
-                      
-                    
-                      
-                      
-                    
-                      
-                      
-                    
-                      
-                      
-                    
-                      
-                      
-                    
-                      
-                      
-                    
-                      
-                      
-                    
-                      
-                      
-                    
-                      
-                      
-                    
-                      
-                      
-                    
-                      
-                      
-                    
-                      
-                      
-                    
-                      
-                      
-                        <img class="platinum-logo" src="sponsors/platinum-sterlite-technologies.png" alt="platinum sponsor logo">
-                      
-                    
-                      
-                      
-                    
-                      
-                      
-                    
-                      
-                      
-                    
-                      
-                      
-                    
-                      
-                      
-                    
-                      
-                      
-                    
-                      
-                      
-                    
-                      
-                      
-                    
-                      
-                      
-                    
-                      
-                      
-                    
-                      
-                      
-                    
+        <div class="row wow fadeInUp" data-wow-delay="0.3s">
+          <div class="col-12">
+            <div id="sponsorsCarousel" class="carousel slide sponsors-carousel" data-ride="carousel" data-interval="4000">
+              <ol class="carousel-indicators">
+                <li data-target="#sponsorsCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#sponsorsCarousel" data-slide-to="1"></li>
+                <li data-target="#sponsorsCarousel" data-slide-to="2"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="sponsors-slide">
+                    <div class="slide-pd-row">
+                      <div class="pd-half platinum-half">
+                        <div class="pd-half-label platinum">Platinum Sponsor</div>
+                        <div class="pd-logo-box">
+                          
+                            
+                            
+                          
+                            
+                            
+                          
+                            
+                            
+                          
+                            
+                            
+                          
+                            
+                            
+                          
+                            
+                            
+                          
+                            
+                            
+                          
+                            
+                            
+                          
+                            
+                            
+                          
+                            
+                            
+                          
+                            
+                            
+                          
+                            
+                            
+                          
+                            
+                            
+                          
+                            
+                            
+                          
+                            
+                            
+                              <img src="sponsors/platinum-sterlite-technologies.png" alt="platinum sponsor logo">
+                            
+                          
+                            
+                            
+                          
+                            
+                            
+                          
+                            
+                            
+                          
+                            
+                            
+                          
+                            
+                            
+                          
+                            
+                            
+                          
+                            
+                            
+                          
+                            
+                            
+                          
+                            
+                            
+                          
+                            
+                            
+                          
+                            
+                            
+                          
+                        </div>
+                      </div>
+                      <div class="pd-half diamond-half">
+                        <div class="pd-half-label diamond">Diamond Sponsors</div>
+                        <div class="pd-logo-box">
+                          
+                            
+                            
+                          
+                            
+                            
+                          
+                            
+                            
+                          
+                            
+                            
+                          
+                            
+                            
+                          
+                            
+                            
+                          
+                            
+                            
+                          
+                            
+                            
+                          
+                            
+                            
+                          
+                            
+                            
+                          
+                            
+                            
+                          
+                            
+                            
+                          
+                            
+                            
+                          
+                            
+                            
+                          
+                            
+                            
+                          
+                            
+                            
+                          
+                            
+                            
+                              <img src="sponsors/diamond-melss-exfo.png" alt="diamond sponsor logo">
+                            
+                          
+                            
+                            
+                          
+                            
+                            
+                          
+                            
+                            
+                          
+                            
+                            
+                          
+                            
+                            
+                          
+                            
+                            
+                          
+                            
+                            
+                          
+                            
+                            
+                          
+                            
+                            
+                          
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
 
-                <div class="sponsor-tier-row">
-                  <div style="text-align:center;"><span class="sponsor-tier-label diamond">Diamond</span></div>
-                  <div class="sponsor-logos-static">
+                <div class="carousel-item">
+                  <div class="sponsors-slide gold-slide">
+                    <div class="sponsors-slide-heading">Gold Sponsors</div>
+                    
+                    
+                    
+                      
+                      
+                        
+                      
+                    
+                      
+                      
+                        
+                      
+                    
+                      
+                      
+                        
+                      
+                    
+                      
+                      
+                    
+                      
+                      
+                        
+                      
+                    
+                      
+                      
+                    
+                      
+                      
+                        
+                      
+                    
+                      
+                      
+                        
+                      
+                    
+                      
+                      
+                        
+                      
+                    
+                      
+                      
+                        
+                      
+                    
+                      
+                      
+                    
+                      
+                      
+                        
+                      
                     
                       
                       
@@ -1026,6 +1195,494 @@
                     
                       
                       
+                        
+                      
+                    
+                      
+                      
+                        
+                      
+                    
+                      
+                      
+                        
+                      
+                    
+                      
+                      
+                    
+                      
+                      
+                    
+                      
+                      
+                        
+                      
+                    
+                      
+                      
+                        
+                      
+                    
+                      
+                      
+                        
+                      
+                    
+                      
+                      
+                    
+                    
+                    
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                          
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                    
+                      
+                        
+                        
+                          
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                    
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                          
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                    
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                          
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                    
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                          
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                    
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                          
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                    
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                          
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                    
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                          
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                    
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                          
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                      
+                    
+                    
+                      
+                      
+                    
+                      
+                      
+                        
+                      
                     
                       
                       
@@ -1038,17 +1695,7 @@
                     
                       
                       
-                    
-                      
-                      
-                    
-                      
-                      
-                    
-                      
-                      
-                    
-                      
+                        
                       
                     
                       
@@ -1059,7 +1706,7 @@
                     
                       
                       
-                        <img class="diamond-logo" src="sponsors/diamond-melss-exfo.png" alt="diamond sponsor logo">
+                        
                       
                     
                       
@@ -1070,14 +1717,7 @@
                     
                       
                       
-                    
-                      
-                      
-                    
-                      
-                      
-                    
-                      
+                        
                       
                     
                       
@@ -1085,688 +1725,73 @@
                     
                       
                       
+                        
+                      
                     
                       
                       
+                        
+                      
                     
-                  </div>
-                </div>
-
-                <div class="sponsor-tier-row">
-                  <div style="text-align:center;"><span class="sponsor-tier-label gold">Gold</span></div>
-                  <div class="gold-carousel-stage">
-                    <div class="gold-carousel-track">
+                    <div class="tier-grid gold-grid">
                       
-                      
-                      
-                        
-                        
-                          
-                        
-                      
-                        
-                        
-                          
-                        
-                      
-                        
-                        
-                          
-                        
-                      
-                        
-                        
-                      
-                        
-                        
-                          
-                        
-                      
-                        
-                        
-                      
-                        
-                        
-                          
-                        
-                      
-                        
-                        
-                          
-                        
-                      
-                        
-                        
-                          
-                        
-                      
-                        
-                        
-                          
-                        
-                      
-                        
-                        
-                      
-                        
-                        
-                          
-                        
-                      
-                        
-                        
-                      
-                        
-                        
-                      
-                        
-                        
-                      
-                        
-                        
-                      
-                        
-                        
-                      
-                        
-                        
-                          
-                        
-                      
-                        
-                        
-                          
-                        
-                      
-                        
-                        
-                          
-                        
-                      
-                        
-                        
-                      
-                        
-                        
-                      
-                        
-                        
-                          
-                        
-                      
-                        
-                        
-                          
-                        
-                      
-                        
-                        
-                          
-                        
-                      
-                        
-                        
-                      
-                      
-                      
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                            
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                      
-                        
-                          
-                          
-                            
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                      
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                            
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                      
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                            
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                      
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                            
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                      
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                            
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                      
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                            
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                      
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                            
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                      
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                            
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                          
-                          
-                        
-                      
-                      
-                        
-                        
-                      
-                        
-                        
-                          
-                        
-                      
-                        
-                        
-                      
-                        
-                        
-                      
-                        
-                        
-                      
-                        
-                        
-                          
-                        
-                      
-                        
-                        
-                      
-                        
-                        
-                      
-                        
-                        
-                          
-                        
-                      
-                        
-                        
-                      
-                        
-                        
-                      
-                        
-                        
-                          
-                        
-                      
-                        
-                        
-                      
-                        
-                        
-                          
-                        
-                      
-                        
-                        
-                          
-                        
-                      
-                      
-                      
-                        <div class="gold-carousel-item" style="transform: rotateY(0.0deg) translateZ(300px);">
+                        <div class="tier-grid-logo-box">
                           <img src="sponsors/gold-atos.png" alt="gold sponsor logo">
                         </div>
                       
-                        <div class="gold-carousel-item" style="transform: rotateY(24.0deg) translateZ(300px);">
+                        <div class="tier-grid-logo-box">
                           <img src="sponsors/gold-melss.png" alt="gold sponsor logo">
                         </div>
                       
-                        <div class="gold-carousel-item" style="transform: rotateY(48.0deg) translateZ(300px);">
+                        <div class="tier-grid-logo-box">
                           <img src="sponsors/gold-thorlabs.png" alt="gold sponsor logo">
                         </div>
                       
-                        <div class="gold-carousel-item" style="transform: rotateY(72.0deg) translateZ(300px);">
+                        <div class="tier-grid-logo-box">
                           <img src="sponsors/gold-axiscades.png" alt="gold sponsor logo">
                         </div>
                       
-                        <div class="gold-carousel-item" style="transform: rotateY(96.0deg) translateZ(300px);">
+                        <div class="tier-grid-logo-box">
                           <img src="sponsors/gold-hfcl.png" alt="gold sponsor logo">
                         </div>
                       
-                        <div class="gold-carousel-item" style="transform: rotateY(120.0deg) translateZ(300px);">
+                        <div class="tier-grid-logo-box">
                           <img src="sponsors/gold-keysight.png" alt="gold sponsor logo">
                         </div>
                       
-                        <div class="gold-carousel-item" style="transform: rotateY(144.0deg) translateZ(300px);">
+                        <div class="tier-grid-logo-box">
                           <img src="sponsors/gold-yokogawa.png" alt="gold sponsor logo">
                         </div>
                       
-                        <div class="gold-carousel-item" style="transform: rotateY(168.0deg) translateZ(300px);">
+                        <div class="tier-grid-logo-box">
                           <img src="sponsors/gold-edmund-optics.png" alt="gold sponsor logo">
                         </div>
                       
-                        <div class="gold-carousel-item" style="transform: rotateY(192.0deg) translateZ(300px);">
+                        <div class="tier-grid-logo-box">
                           <img src="sponsors/gold-htl.png" alt="gold sponsor logo">
                         </div>
                       
-                        <div class="gold-carousel-item" style="transform: rotateY(216.0deg) translateZ(300px);">
+                        <div class="tier-grid-logo-box">
                           <img src="sponsors/gold-optosigma.png" alt="gold sponsor logo">
                         </div>
                       
-                        <div class="gold-carousel-item" style="transform: rotateY(240.0deg) translateZ(300px);">
+                        <div class="tier-grid-logo-box">
                           <img src="sponsors/gold-laser-science.png" alt="gold sponsor logo">
                         </div>
                       
-                        <div class="gold-carousel-item" style="transform: rotateY(264.0deg) translateZ(300px);">
+                        <div class="tier-grid-logo-box">
                           <img src="sponsors/gold-advanced-photonics.png" alt="gold sponsor logo">
                         </div>
                       
-                        <div class="gold-carousel-item" style="transform: rotateY(288.0deg) translateZ(300px);">
+                        <div class="tier-grid-logo-box">
                           <img src="sponsors/gold-zen-technologies.png" alt="gold sponsor logo">
                         </div>
                       
-                        <div class="gold-carousel-item" style="transform: rotateY(312.0deg) translateZ(300px);">
+                        <div class="tier-grid-logo-box">
                           <img src="sponsors/gold-lucius-photonics.png" alt="gold sponsor logo">
                         </div>
                       
-                        <div class="gold-carousel-item" style="transform: rotateY(336.0deg) translateZ(300px);">
+                        <div class="tier-grid-logo-box">
                           <img src="sponsors/gold-aimil.png" alt="gold sponsor logo">
                         </div>
                       
@@ -1774,30 +1799,12 @@
                   </div>
                 </div>
 
-                <div class="sponsor-tier-row">
-                  <div style="text-align:center;"><span class="sponsor-tier-label silver">Silver</span></div>
-                  <div class="silver-carousel-stage">
-                    <div class="silver-carousel-track">
-                      
-                      
-                        
-                        
+                <div class="carousel-item">
+                  <div class="sponsors-slide silver-slide">
+                    <div class="sponsors-slide-heading">Silver Sponsors</div>
+                    <div class="tier-grid silver-grid">
                       
                         
-                        
-                      
-                        
-                        
-                      
-                        
-                        
-                      
-                        
-                        
-                      
-                        
-                        
-                          
                         
                       
                         
@@ -1814,28 +1821,9 @@
                       
                         
                         
-                          
-                        
-                      
-                        
-                        
-                      
-                        
-                        
-                          
-                        
-                      
-                        
-                        
-                          
-                        
-                      
-                        
-                        
-                      
-                        
-                        
-                          
+                          <div class="tier-grid-logo-box">
+                            <img src="sponsors/silver-new-age-instruments.png" alt="silver sponsor logo">
+                          </div>
                         
                       
                         
@@ -1852,15 +1840,9 @@
                       
                         
                         
-                          
-                        
-                      
-                        
-                        
-                          
-                        
-                      
-                        
+                          <div class="tier-grid-logo-box">
+                            <img src="sponsors/silver-britton-innotech.png" alt="silver sponsor logo">
+                          </div>
                         
                       
                         
@@ -1868,51 +1850,82 @@
                       
                         
                         
+                          <div class="tier-grid-logo-box">
+                            <img src="sponsors/silver-holmarc.png" alt="silver sponsor logo">
+                          </div>
+                        
                       
                         
                         
-                          
+                          <div class="tier-grid-logo-box">
+                            <img src="sponsors/silver-quanfluence.png" alt="silver sponsor logo">
+                          </div>
                         
                       
+                        
+                        
                       
+                        
+                        
+                          <div class="tier-grid-logo-box">
+                            <img src="sponsors/silver-clear-communications.png" alt="silver sponsor logo">
+                          </div>
+                        
                       
-                        <div class="silver-carousel-item" style="transform: rotateY(0.0deg) translateZ(140px);">
-                          <img src="sponsors/silver-new-age-instruments.png" alt="silver sponsor logo">
-                        </div>
+                        
+                        
                       
-                        <div class="silver-carousel-item" style="transform: rotateY(45.0deg) translateZ(140px);">
-                          <img src="sponsors/silver-britton-innotech.png" alt="silver sponsor logo">
-                        </div>
+                        
+                        
                       
-                        <div class="silver-carousel-item" style="transform: rotateY(90.0deg) translateZ(140px);">
-                          <img src="sponsors/silver-holmarc.png" alt="silver sponsor logo">
-                        </div>
+                        
+                        
                       
-                        <div class="silver-carousel-item" style="transform: rotateY(135.0deg) translateZ(140px);">
-                          <img src="sponsors/silver-quanfluence.png" alt="silver sponsor logo">
-                        </div>
+                        
+                        
                       
-                        <div class="silver-carousel-item" style="transform: rotateY(180.0deg) translateZ(140px);">
-                          <img src="sponsors/silver-clear-communications.png" alt="silver sponsor logo">
-                        </div>
+                        
+                        
+                          <div class="tier-grid-logo-box">
+                            <img src="sponsors/silver-photik.png" alt="silver sponsor logo">
+                          </div>
+                        
                       
-                        <div class="silver-carousel-item" style="transform: rotateY(225.0deg) translateZ(140px);">
-                          <img src="sponsors/silver-photik.png" alt="silver sponsor logo">
-                        </div>
+                        
+                        
+                          <div class="tier-grid-logo-box">
+                            <img src="sponsors/silver-shimadzu.png" alt="silver sponsor logo">
+                          </div>
+                        
                       
-                        <div class="silver-carousel-item" style="transform: rotateY(270.0deg) translateZ(140px);">
-                          <img src="sponsors/silver-shimadzu.png" alt="silver sponsor logo">
-                        </div>
+                        
+                        
                       
-                        <div class="silver-carousel-item" style="transform: rotateY(315.0deg) translateZ(140px);">
-                          <img src="sponsors/silver-slp.png" alt="silver sponsor logo">
-                        </div>
+                        
+                        
+                      
+                        
+                        
+                      
+                        
+                        
+                          <div class="tier-grid-logo-box">
+                            <img src="sponsors/silver-slp.png" alt="silver sponsor logo">
+                          </div>
+                        
                       
                     </div>
                   </div>
                 </div>
-
               </div>
+              <a class="carousel-control-prev" href="#sponsorsCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#sponsorsCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
             </div>
           </div>
         </div>
